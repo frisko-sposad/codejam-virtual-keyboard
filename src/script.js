@@ -146,9 +146,9 @@ for (let i = 0; i < buttons.length; i++) { // задаём размер кноп
 // Функция вывода символа
 function printLetter(currentKey) {
   const letter = (language === 'En') ? currentKey.dataset.En : currentKey.dataset.Ru;
-  if (letter === 'Tab') text.push('\t');
-  if (letter === 'Enter') text.push('\r\n');
-  if (letter === '←') {
+  if (currentKey.dataset.code === 'Tab') text.push('\t');
+  if (currentKey.dataset.code === 'Enter') text.push('\r\n');
+  if (currentKey.dataset.code === 'Backspace') {
     text.pop();
     textarea.textContent = text.join('');
   }
