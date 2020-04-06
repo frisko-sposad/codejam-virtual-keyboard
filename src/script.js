@@ -194,8 +194,8 @@ function runOnKeys(func, ...codes) {
   document.addEventListener('keydown', (event) => {
     dublKeys.add(event.code);
 
-    for (const code of codes) { // все ли клавиши из набора нажаты?
-      if (!dublKeys.has(code)) {
+    for (let i = 0; i < codes.length; i++) { // все ли клавиши из набора нажаты?
+      if (!dublKeys.has(codes[i])) {
         return;
       }
     }
