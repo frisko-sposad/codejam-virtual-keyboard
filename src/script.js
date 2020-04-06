@@ -6,7 +6,7 @@ const textarea = document.createElement('textarea');
 const text = [];
 
 textarea.classList.add('textarea');
-textarea.setAttribute("disabled", "disabled");
+textarea.setAttribute('disabled', 'disabled');
 document.body.append(textarea);
 
 const keyboard = document.createElement('div');
